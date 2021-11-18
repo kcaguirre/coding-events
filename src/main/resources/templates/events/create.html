@@ -2,11 +2,13 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
 </head>
+
 <body>
-
-<h1>Events</h1>
-
 <nav th:replace="fragments :: navigation"></nav>
 
+    <form method="post" acttion="/events/create">
+        <input type="text" name="eventName">
+        <input type="submit" value="Create New Event">
+    </form>
 </body>
 </html>
