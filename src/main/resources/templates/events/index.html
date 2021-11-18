@@ -3,13 +3,26 @@
 <head th:replace="fragments :: head">
 </head>
 <body>
-<nav th:replace="fragments :: navigation"></nav>
+    <div class="nav-bar"><nav th:replace="fragments :: navigation"></nav>
+    </div>
 
-    <h2>All Events</h2>
-    <p th:unless="${events} and ${events.size()}">No events!</p>
+    <div class="content"><h2>All Events</h2>
+        <p th:unless="${events} and ${events.size()}">No events!</p>
 
-    <ul th:block th:each = "event : ${events}">
-        <li th:text="${event}">Event Name</li>
-    </ul>
+        <table>
+            <th scope="col">Event Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Address</th>
+            <th:block th:each="name : ${events.keySet()}">
+                <tr>
+                    <td th:text="${name}">Name of Event</td>
+                    <td th:text="${events.get(name)}">Event description</td>
+                    <td th:replace="fragments :: address">Address</td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+
+
 </body>
 </html>

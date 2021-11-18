@@ -2,15 +2,16 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:fragment="head">
     <meta charset="UTF-8"/>
-    <title>Coding Events</title>
+    <center><title>Events</title></center>
 
     <script th:src="@{/script.js}"></script>
-    <link rel = "stylesheet" th:href="@{/styles.css}"/>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-
+    <link rel = "stylesheet" th:href="@{/styles.css}"/>
 </head>
+
 <body>
 <nav th:fragment="navigation">
     <ul>
@@ -19,6 +20,9 @@
     </ul>
 </nav>
 
-</nav>
+<table>
+    <td th:fragment="address">1234 5th St</td>
+</table>
+
 </body>
 </html>
