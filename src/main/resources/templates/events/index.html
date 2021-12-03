@@ -3,7 +3,7 @@
 <head th:replace="fragments :: head">
 </head>
 <body>
-    <div class="nav-bar"><nav th:replace="fragments :: navigation"></nav>
+    <div class="nav-bar"><nav th:replace="fragments :: header"></nav>
     </div>
 
     <div class="content"><h2>All Events</h2>
@@ -13,10 +13,10 @@
             <th scope="col">Event Name</th>
             <th scope="col">Description</th>
             <th scope="col">Address</th>
-            <th:block th:each="name : ${events.keySet()}">
+            <th:block th:each="event : ${events}">
                 <tr>
-                    <td th:text="${name}">Name of Event</td>
-                    <td th:text="${events.get(name)}">Event description</td>
+                    <td th:text="${event.name}">Name of Event</td>
+                    <td th:text="${event.description}">Event description</td>
                     <td th:replace="fragments :: address">Address</td>
                 </tr>
             </th:block>

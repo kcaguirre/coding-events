@@ -4,11 +4,18 @@
 </head>
 
 <body>
-<nav th:replace="fragments :: navigation"></nav>
-
+<nav th:replace="fragments :: header"></nav>
+<div class="form-group">
     <form method="post" acttion="/events/create">
-        <input type="text" name="eventName">
+        <label>Name
+            <input type="text" name="eventName" class="form-control">
+        </label>
+        <label>Description (optional):
+            <input type="text" name="eventDescription" class="form-control">
+        </label>
         <input type="submit" value="Create New Event">
     </form>
+</div>
+
 </body>
 </html>
