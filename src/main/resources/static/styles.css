@@ -1,0 +1,25 @@
+.content {
+    margin: auto;
+    width: 75%;
+}
+
+body {
+    background-color: #171717;
+    color: #fdfefd;
+}
+
+table, th {
+    border: 3 px solid #fdfefd;
+
+    }
+
+th {
+    background-color: #7b47ba;
+
+tr:nth-child(odd)
+{
+    background-color: #a19f95;
+}
+
+
+}
